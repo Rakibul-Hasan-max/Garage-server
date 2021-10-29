@@ -5,7 +5,7 @@ const cors = require('cors');
 const ObjectId = require('mongodb').ObjectId;
 
 const app = express();
-const port = 5000;
+const port = process.env.PORT || 5000;
 
 // middleware
 app.use(cors());
@@ -71,3 +71,8 @@ app.get('/', (req, res) => {
 app.listen(port, () => {
 	console.log('Running Garage server on port', port);
 })
+
+
+// heroku login 
+// heroku create 
+// git push heroku main 
